@@ -1,14 +1,12 @@
-a = float(input("Enter a: "))
-b = float(input("Enter b: "))
+total_hits = 0
 
-if a <= 0 or b <= 0:
-    print("Error: a and b must be positive!")
-else:
-    if a > b:
-        X = a / b - 1
-    elif a == b:
-        X = -25
+print("Hour", "   ", "Hits")
+
+for hour in range(16):  # from 0 to 15
+    total_hits += hour
+    if hour < 10:
+        print(hour, " " * 6, total_hits)
     else:
-        X = (a ** 3 - 5) / a
+        print(hour, " " * 5, total_hits)
 
-    print("Result X =", X)
+print("Total hits =", total_hits)
